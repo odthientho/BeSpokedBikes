@@ -24,11 +24,11 @@ Product.init(
             allowNull: false,
         },
         purchase_price: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.DECIMAL(10, 2),
             allowNull: false,
         },
         sale_price: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.DECIMAL(10, 2),
             allowNull: false,
         },
         quantity_on_hand: {
@@ -36,7 +36,7 @@ Product.init(
             allowNull: false,
         },
         commission_percentage: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.DECIMAL(5, 2),
             allowNull: false,
         },
     },

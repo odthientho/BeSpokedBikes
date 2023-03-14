@@ -1,0 +1,14 @@
+[
+    {
+        "product_id": 1,
+        "begin_date": "2022-01-01",
+        "end_date": "2022-02-28",
+        "discount_percentage": 0.10
+    }, 
+    {
+        "product_id": 2,
+        "begin_date": "2022-02-01",
+        "end_date": "2022-03-31",
+        "discount_percentage": 0.15
+    }
+]

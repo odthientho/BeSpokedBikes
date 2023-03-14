@@ -13,7 +13,7 @@ Sales.init(
         },
         product_id: {
             type: DataTypes.INTEGER,
-            allowNull: true,
+            allowNull: false,
             references: {
                 model: 'product',
                 key: 'id',
@@ -21,7 +21,7 @@ Sales.init(
         }, 
         salesperson_id: {
             type: DataTypes.INTEGER,
-            allowNull: true,
+            allowNull: false,
             references: {
                 model: 'salesperson',
                 key: 'id',
@@ -29,14 +29,14 @@ Sales.init(
         },
         customer_id: {
             type: DataTypes.INTEGER,
-            allowNull: true,
+            allowNull: false,
             references: {
                 model: 'customer', 
                 key: 'id',
             }
         },
         sales_date: {
-            type: DataTypes.DATE,
+            type: DataTypes.DATEONLY,
             allowNull: true,
         },
     },

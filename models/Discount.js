@@ -20,15 +20,15 @@ Discount.init(
               },
         },
         begin_date: {
-            type: DataTypes.DATE,
+            type: DataTypes.DATEONLY,
             allowNull: true,
         },
         end_date: {
-            type: DataTypes.DATE,
+            type: DataTypes.DATEONLY,
             allowNull: true,
         },
         discount_percentage: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.DECIMAL(5,2),
             allowNull: true,
         }
     },

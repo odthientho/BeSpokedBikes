@@ -1,0 +1,30 @@
+[
+    {
+        "first_name": "Sarah",
+        "last_name": "Brown",
+        "address": "111 Pine St.",
+        "phone": "555-987-6543",
+        "start_date": "2022-02-01"
+    }, 
+    {
+        "first_name": "David",
+        "last_name": "Lee",
+        "address": "222 Cedar Ave.",
+        "phone": "555-876-5432",
+        "start_date": "2022-01-01"
+    }, 
+    {
+        "first_name": "Lisa",
+        "last_name": "Kim",
+        "address": "333 Elm St.",
+        "phone": "555-765-4321",
+        "start_date": "2021-12-01"
+    }, 
+    {
+        "first_name": "Mike",
+        "last_name": "Johnson",
+        "address": "444 Oakwood Blvd.",
+        "phone": "555-654-3210",
+        "start_date": "2021-11-01"
+    }
+]

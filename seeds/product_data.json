@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Product A",
+        "manufacturer": "Company 1",
+        "style": "Style 1",
+        "purchase_price": 50,
+        "sale_price": 75,
+        "quantity_on_hand": 100,
+        "commission_percentage": 0.1
+    }, 
+    {
+        "name": "Product B",
+        "manufacturer": "Company 2",
+        "style": "Style 2",
+        "purchase_price": 75,
+        "sale_price": 100,
+        "quantity_on_hand": 50,
+        "commission_percentage": 0.15
+    }, 
+    {
+        "name": "Product C",
+        "manufacturer": "Company 1",
+        "style": "Style 3",
+        "purchase_price": 100,
+        "sale_price": 150,
+        "quantity_on_hand": 25,
+        "commission_percentage": 0.12
+    }, 
+    {
+        "name": "Product D",
+        "manufacturer": "Company 3",
+        "style": "Style 4",
+        "purchase_price": 125,
+        "sale_price": 175,
+        "quantity_on_hand": 75,
+        "commission_percentage": 0.08
+    }
+]

@@ -28,7 +28,7 @@ Customer.init(
             allowNull: true,
         },
         start_date: {
-            type: DataTypes.DATE,
+            type: DataTypes.DATEONLY,
             allowNull: true,
         },
     },
