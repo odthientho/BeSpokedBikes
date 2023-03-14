@@ -1,0 +1,22 @@
+[
+    {
+        "email": "john.doe@example.com",
+        "password": "passw0rd123"
+    },
+    {
+        "email": "david.jones@example.com",
+        "password": "secret321"
+    },
+    {
+        "email": "emily.brown@example.com",
+        "password": "p@ssw0rd!"
+    },
+    {
+        "email": "alexander.wang@example.com",
+        "password": "passw0rd$123"
+    },
+    {
+        "email": "amanda.nguyen@example.com",
+        "password": "securepassword"
+    }
+]
