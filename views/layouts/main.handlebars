@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polished - Appointment Booking System for Nail Salons</title> 
+  
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/home.css">
+  <link rel="stylesheet" href="/css/login.css">
+  <link rel="stylesheet" href='/css/booking.css'>
+  <link rel="stylesheet" href='/css/manager.css'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Urbanist:wght@100;200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="nav-btn" id="home-nav-btn" href="/">HOME</a>
+            {{#if logged_in}}
+            <a class="nav-btn" id="logout-nav-btn">LOGOUT</a> 
+            {{/if}}
+        </nav>
+    </header> 
+    <main>
+        <div class="header-main"></div>
+        {{{ body }}}
+    </main>
+    {{#if logged_in}}
+    <script src="/javascript/logout.js"></script>
+    {{/if}}
+    <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+</body>
+
+</html>

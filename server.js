@@ -11,8 +11,8 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Helpers for the app from nodemailer, twillio and auth (for login)
-const helpers = require('./utils/view-helpers');
-const hbs = exphbs.create({ helpers });
+// const helpers = require('./utils/view-helpers');
+const hbs = exphbs.create({ });
 
 const sess = {
   secret: 'This is just a super secret key',

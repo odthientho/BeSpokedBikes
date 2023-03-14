@@ -3,7 +3,6 @@ const sequelize = require('../config/connection');
 const bcrypt = require('bcrypt');
  
 class Client extends Model {
-    //compare the hashed pw stored in the database with the original pw created by the user
     checkPassword(loginPw) {
         return bcrypt.compareSync(loginPw, this.password);
       }
@@ -40,7 +39,6 @@ Client.init(
     },
     {
         hooks: {
-            //hashing the user pw before inserting it into the database
             beforeCreate: async (newClientData) => {
                 newClientData.password = await bcrypt.hash(newClientData.password, 10);
                 return newClientData;
