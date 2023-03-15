@@ -43,8 +43,22 @@ const customerBtnHandler = async function(event) {
       }
     }).render(document.getElementById("customer-section"));
 
-    customerGrid.on('rowClick', (...args) => {
-      console.log(args);
+    customerGrid.on('cellClick', async (...args) => {
+      var text = args[1].data;
+      var result = prompt("You want to change " + args[2].name.toLowerCase() + "?", text);
+      if (result == null || result == text) {
+      } else {
+        var response = await fetch('/api/customers/'+args[3]._cells[0].data, {
+          method: 'PUT',
+          body: JSON.stringify({[args[2].id]: result}),
+          headers: { 'Content-Type': 'application/json' },
+        });
+        if (response.ok) {
+          document.location.reload(); 
+        } else {
+          alert("Not Able To Update Data");
+        }
+      }
     });
   }
 }
@@ -100,8 +114,22 @@ const productBtnHandler = async function(event) {
         tr: 'view-section-table-tr'
       }
     }).render(document.getElementById("product-section"));
-    productGrid.on('rowClick', (...args) => {
-      console.log(args);
+    productGrid.on('cellClick', async (...args) => {
+      var text = args[1].data;
+      var result = prompt("You want to change " + args[2].name.toLowerCase() + "?", text);
+      if (result == null || result == text) {
+      } else {
+        var response = await fetch('/api/products/'+args[3]._cells[0].data, {
+          method: 'PUT',
+          body: JSON.stringify({[args[2].id]: result}),
+          headers: { 'Content-Type': 'application/json' },
+        });
+        if (response.ok) {
+          document.location.reload(); 
+        } else {
+          alert("Not Able To Update Data");
+        }
+      }
     });
   }
 }
@@ -157,8 +185,22 @@ const salespersonBtnHandler = async function(event) {
         tr: 'view-section-table-tr'
       }
     }).render(document.getElementById("salesperson-section"));
-    salespersonGrid.on('rowClick', (...args) => {
-      console.log(args);
+    salespersonGrid.on('cellClick', async (...args) => {
+      var text = args[1].data;
+      var result = prompt("You want to change " + args[2].name.toLowerCase() + "?", text);
+      if (result == null || result == text) {
+      } else {
+        var response = await fetch('/api/salespersons/'+args[3]._cells[0].data, {
+          method: 'PUT',
+          body: JSON.stringify({[args[2].id]: result}),
+          headers: { 'Content-Type': 'application/json' },
+        });
+        if (response.ok) {
+          document.location.reload(); 
+        } else {
+          alert("Not Able To Update Data");
+        }
+      }
     });
   }
 }

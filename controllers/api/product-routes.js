@@ -14,4 +14,19 @@ router.get('/', withAuth, async (req, res) => {
     }
 });
 
+router.put('/:id', withAuth, async(req, res) => {
+    try {
+        var productId = req.params.id;
+        var updatingData = req.body;
+        await Product.update(updatingData, {
+            where: {
+                id: productId
+            }
+        })
+        res.status(200).json();
+    } catch (err) {
+        res.status(400).json(err);
+    }
+});
+
 module.exports = router;

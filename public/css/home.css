@@ -182,7 +182,6 @@ header nav .nav-btn:hover {
 .view-section-table-tr:hover {
   cursor: pointer;
   color: red;
-  
 }
 
 @media screen and (min-width: 1000px) {  
