@@ -1,0 +1,38 @@
+<aside class="authentication-column" id="quaterlyReportAside">
+    <h1 class="authentication-title">QUARTERLY REPORT</h1>
+    <form class="authentication-form">
+        <div class="authentication-input">
+            <label>SalesDate</label>
+            <input id="salesDateId" type="date" required>
+        </div>
+        <div class="authentication-input">
+            <label>Salesperson Name</label>
+            <select id="salespersonNameId" list="salespersonName" required>
+                {{#each salespersons as | sales | }}
+                    <option value="{{sales.id}}">{{sales.first_name}} {{sales.last_name}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <div class="authentication-input">
+            <label>Customer Name</label>
+            <select id="customerNameId" list="customerName" required>
+                {{#each customers as | cus | }}
+                    <option value="{{cus.id}}">{{cus.first_name}} {{cus.last_name}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <div class="authentication-input">
+            <label>Product Name</label>
+            <select id="productNameId" list="productName" required>
+                {{#each products as | prop | }}
+                    <option value="{{prop.id}}">{{prop.name}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <div class="authentication-input">
+            <button id="salesnewBtn" type="submit">Make a Sale</button>
+        </div>
+    </form>
+    <div id="quarterly-report"></div>
+</aside>
+<script src="/javascript/salesnew.js"></script>  

@@ -39,6 +39,29 @@ router.get('/report', async (req, res) => {
     res.render('login');
 });
 
+router.get('/salesnew', async (req, res) => {
+    if (req.session.logged_in) {
+        try {
+            const customerData = await Customer.findAll();
+            var customers = customerData.map((p) => p.get({ plain: true}));
+            const productData = await Product.findAll();
+            var products = productData.map((p) => p.get({ plain: true}));
+            const salespersonData = await Salesperson.findAll();
+            var salespersons = salespersonData.map((p) => p.get({ plain: true}));
+            res.render('salesnew', {
+                customers,
+                products,
+                salespersons,
+                logged_in: req.session.logged_in,
+            });
+            return;
+        } catch (err) {
+            res.status(400).json(err);
+        }
+    }
+    res.render('login');
+});
+
 router.post('/logout', (req, res) => {
     if (req.session.logged_in) {
         req.session.destroy(() => {

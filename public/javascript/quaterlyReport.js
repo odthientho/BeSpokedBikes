@@ -5,10 +5,9 @@ const reportBtnHandler = async (event) => {
     var endDate = document.querySelector('#endDateId').value;
   
     if (salespersonId && startDate && endDate) {
-      var response = await fetch('/api/sales/', {
+      var response = await fetch('/api/sales/'+salespersonId, {
         method: 'POST',
         body: JSON.stringify({ 
-          salespersonId: salespersonId, 
           startDate: startDate,
           endDate: endDate,
         }),
