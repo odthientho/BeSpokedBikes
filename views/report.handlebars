@@ -1,0 +1,26 @@
+<aside class="authentication-column" id="quaterlyReportAside">
+    <h1 class="authentication-title">QUARTERLY REPORT</h1>
+    <form class="authentication-form">
+        <div class="authentication-input">
+            <label>Salesperson Name</label>
+            <select id="salespersonNameId" list="salespersonName" required>
+                {{#each salespersons as | sales | }}
+                    <option value="{{sales.id}}">{{sales.first_name}} {{sales.last_name}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <div class="authentication-input">
+            <label>Start Date</label>
+            <input id="startDateId" type="date" required>
+        </div>
+        <div class="authentication-input">
+            <label>End Date</label>
+            <input id="endDateId" type="date" required>
+        </div>
+        <div class="authentication-input">
+            <button id="reportBtn" type="submit">Report</button>
+        </div>
+    </form>
+    <div id="quarterly-report"></div>
+</aside>
+<script src="/javascript/quaterlyReport.js"></script>  

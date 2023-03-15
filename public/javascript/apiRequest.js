@@ -222,11 +222,10 @@ const salesBtnHandler = async function(event) {
         'customerName': aSale.customer.first_name+" "+aSale.customer.last_name,
         'salespersonName': aSale.salesperson.first_name+" "+aSale.salesperson.last_name,
         'productName': aSale.product.name,
-        'price': aSale.product.sale_price,
-        'commission': (aSale.product.sale_price-aSale.product.purchase_price)*aSale.product.commission_percentage
+        'price': "$"+aSale.product.sale_price,
+        'commission': "$"+(aSale.product.sale_price-aSale.product.purchase_price)*aSale.product.commission_percentage
       }
     });
-    console.log(sales);
     document.getElementById("customer-section").innerHTML = "";
     document.getElementById("product-section").innerHTML = "";
     document.getElementById("salesperson-section").innerHTML = "";
