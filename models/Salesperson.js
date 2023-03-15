@@ -11,15 +11,16 @@ Salesperson.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        first_name: {
+        phone: {
             type: DataTypes.STRING,
             allowNull: false,
-        }, 
-        last_name: {
+            unique: true,
+        },
+        first_name: {
             type: DataTypes.STRING,
             allowNull: true,
-        },
-        phone: {
+        }, 
+        last_name: {
             type: DataTypes.STRING,
             allowNull: true,
         },

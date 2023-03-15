@@ -13,15 +13,16 @@ Product.init(
         },
         name: {
             type: DataTypes.STRING,
+            unique: true,
             allowNull: false,
         },
         manufacturer: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         style: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         purchase_price: {
             type: DataTypes.DECIMAL(10, 2),

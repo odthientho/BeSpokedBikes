@@ -91,6 +91,12 @@ header nav .nav-btn:hover {
   justify-content: space-around;
 }
 
+.flex-column {
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
 .each-service {
   position: relative;
   margin: 30px 30px;
@@ -140,4 +146,52 @@ header nav .nav-btn:hover {
   font-size: 20px;
   font-family: 'Urbanist', sans-serif;
   color: black;
+}
+.appointment-booking, .appointment-customer-history {
+  width: 75%;
+  margin: 0 20px;
+  margin-bottom: 50px;
+  border-radius: 20px;
+}
+
+.appt-submit-btn {
+  cursor: pointer;
+
+  font-family: 'Bebas Neue', cursive;
+  font-size: 20px;
+  color: black;
+  background-color: #f7be94;
+
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 0.5px;
+  border-color: black;
+
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  margin-top: 5px;
+}
+
+.view-section-table-tr {
+  text-align: center;
+}
+
+.view-section-table-tr:hover {
+  cursor: pointer;
+  color: red;
+  
+}
+
+@media screen and (min-width: 1000px) {  
+  .appointment-booking {
+    width: 10%;
+    margin-bottom: 20px;
+  }
+  .appointment-customer-history, .appointment-calendar  {
+      width: 80%;
+      margin-bottom: 20px;
+  }
 }
