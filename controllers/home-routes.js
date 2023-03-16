@@ -19,6 +19,31 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
+router.post('/login', async (req, res) => {
+    try {
+        const clientData = await Client.findOne({ where: { email: req.body.email } });
+        if (!clientData) {
+            res
+                .status(400)
+                .json({ message: 'No emails found, please try again' });
+            return;
+        }
+        const validPassword = await clientData.checkPassword(req.body.password);
+        if (!validPassword) {
+            res
+                .status(400)
+                .json({ message: 'Incorrect password, please try again' });
+            return;
+        } else
+        req.session.save(() => {
+            req.session.logged_in = true;
+            res.status(200).json({ client: clientData, message: 'You are now logged in!' });
+        });
+    } catch (err) {
+        res.status(400).json(err);
+    }
+});
+
 router.get('/report', async (req, res) => {
     if (req.session.logged_in) {
         try {
